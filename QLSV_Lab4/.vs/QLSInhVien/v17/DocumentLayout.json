@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\lab_mahoacsdl_lab04\\qlsv_lab4\\qlsinhvien\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\lab_mahoacsdl_lab04\\qlsv_lab4\\qlsinhvien\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmQuanLyNhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\frmQuanLyNhanVien.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs",
+              "RelativeToolTip": "QLSInhVien\\frmQuanLyNhanVien.cs",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAUwBUBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T15:56:00.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmQuanLyNhanVien.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\frmQuanLyNhanVien.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs [Design]",
+              "RelativeToolTip": "QLSInhVien\\frmQuanLyNhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T15:55:41.726Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

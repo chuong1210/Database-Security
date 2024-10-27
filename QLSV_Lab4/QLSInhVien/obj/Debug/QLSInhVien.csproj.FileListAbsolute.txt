@@ -1,0 +1,34 @@
+D:\DVT\QLSInhVien\QLSInhVien\bin\Debug\QLSInhVien.exe.config
+D:\DVT\QLSInhVien\QLSInhVien\bin\Debug\QLSInhVien.exe
+D:\DVT\QLSInhVien\QLSInhVien\bin\Debug\QLSInhVien.pdb
+D:\DVT\QLSInhVien\QLSInhVien\obj\Debug\QLSInhVien.csproj.AssemblyReference.cache
+D:\DVT\QLSInhVien\QLSInhVien\obj\Debug\QLSInhVien.Login.resources
+D:\DVT\QLSInhVien\QLSInhVien\obj\Debug\QLSInhVien.Properties.Resources.resources
+D:\DVT\QLSInhVien\QLSInhVien\obj\Debug\QLSInhVien.csproj.GenerateResource.cache
+D:\DVT\QLSInhVien\QLSInhVien\obj\Debug\QLSInhVien.csproj.CoreCompileInputs.cache
+D:\DVT\QLSInhVien\QLSInhVien\obj\Debug\QLSInhVien.exe
+D:\DVT\QLSInhVien\QLSInhVien\obj\Debug\QLSInhVien.pdb
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\QLSInhVien.exe.config
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\QLSInhVien.exe
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\QLSInhVien.pdb
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Security.AccessControl.dll
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Security.Cryptography.Cng.dll
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Security.Permissions.dll
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Security.AccessControl.xml
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Security.Cryptography.Cng.xml
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Security.Permissions.xml
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.csproj.AssemblyReference.cache
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.Login.resources
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.Properties.Resources.resources
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.csproj.GenerateResource.cache
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.csproj.CoreCompileInputs.cache
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.csproj.Up2Date
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.exe
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.pdb
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\SuperMarketManager.frmQuanLyNhanVien.resources
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.GUI.FormQuanLyLop.resources
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\Lab_MahoaCSDL_lab04\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.GUI.formQuanLySinhVien.resources
