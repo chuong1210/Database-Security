@@ -49,6 +49,7 @@
             this.lbDM = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpNGAYSINH = new System.Windows.Forms.DateTimePicker();
+            this.btnQLDiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_sinhvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +109,7 @@
             this.btn_thoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_thoat.Font = new System.Drawing.Font("Bahnschrift", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_thoat.ForeColor = System.Drawing.Color.Sienna;
-            this.btn_thoat.Location = new System.Drawing.Point(904, 567);
+            this.btn_thoat.Location = new System.Drawing.Point(1073, 567);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(97, 84);
             this.btn_thoat.TabIndex = 86;
@@ -240,11 +241,27 @@
             this.dtpNGAYSINH.Size = new System.Drawing.Size(248, 22);
             this.dtpNGAYSINH.TabIndex = 94;
             // 
+            // btnQLDiem
+            // 
+            this.btnQLDiem.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLDiem.BackgroundImage = global::QLSInhVien.Properties.Resources.wp7124745;
+            this.btnQLDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnQLDiem.Font = new System.Drawing.Font("Bahnschrift", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLDiem.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnQLDiem.Location = new System.Drawing.Point(906, 567);
+            this.btnQLDiem.Name = "btnQLDiem";
+            this.btnQLDiem.Size = new System.Drawing.Size(144, 84);
+            this.btnQLDiem.TabIndex = 95;
+            this.btnQLDiem.Text = "Quản lý điểm";
+            this.btnQLDiem.UseVisualStyleBackColor = false;
+            this.btnQLDiem.Click += new System.EventHandler(this.btnQLDiem_Click);
+            // 
             // formQuanLySinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 715);
+            this.Controls.Add(this.btnQLDiem);
             this.Controls.Add(this.dtpNGAYSINH);
             this.Controls.Add(this.btnQlSV);
             this.Controls.Add(this.label9);
@@ -296,5 +313,6 @@
         private System.Windows.Forms.Label lbDM;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpNGAYSINH;
+        private System.Windows.Forms.Button btnQLDiem;
     }
 }

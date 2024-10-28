@@ -16,6 +16,7 @@ using QLSInhVien.DTO;
 using System.Configuration;
 using QLSInhVien.DAL;
 using QLSInhVien.GUI;
+using QLSInhVien.Helper;
 
 namespace SuperMarketManager
 {
@@ -24,17 +25,13 @@ namespace SuperMarketManager
         private NhanVienBLL _nhanVienBLL = new NhanVienBLL();
         private string privateKey = "<RSAKeyValue><Modulus>vnahAtVsWGFZgF4iYbXyp15crqDiG7ZPSmS6DdRO4iSoojlrIi2/yUvN4S0wu8whH71WCy5wAoI5/YLOE3/6IQ==</Modulus><Exponent>AQAB</Exponent><P>yZ46yJYkupsiLqYrAWKL9zps6YnK1hP7TEbxfVGSI9c=</P><Q>8dYqaUMc++z7sE7PtgbMQ3sHVBuxD5Jc7We+TbKHEsc=</Q><DP>HGhQ/AY7spc9H7mGAbHy6qiuw9EIZVV3aO3uBKxDnQ0=</DP><DQ>fircf4QrB+fQO2Ayj2WmhYIXBbNYwaX7Y0QfjYuZWps=</DQ><InverseQ>XgZQ0H4m5ZGTF4T7JIXskIxmIOvP3xOXFILD5Z8URGQ=</InverseQ><D>bTENddZtWu3UpedRxrrM9m7+q47IkiKeqoO8tpj08GgdmZyFiuznEVsIEpmNPFv9yQlG12bYM6ZQruACbR35EQ==</D></RSAKeyValue>";
         private string publicKey = "<RSAKeyValue><Modulus>vnahAtVsWGFZgF4iYbXyp15crqDiG7ZPSmS6DdRO4iSoojlrIi2/yUvN4S0wu8whH71WCy5wAoI5/YLOE3/6IQ==</Modulus><Exponent>AQAB</Exponent><P>yZ46yJYkupsiLqYrAWKL9zps6YnK1hP7TEbxfVGSI9c=</P><Q>8dYqaUMc++z7sE7PtgbMQ3sHVBuxD5Jc7We+TbKHEsc=</Q><DP>HGhQ/AY7spc9H7mGAbHy6qiuw9EIZVV3aO3uBKxDnQ0=</DP><DQ>fircf4QrB+fQO2Ayj2WmhYIXBbNYwaX7Y0QfjYuZWps=</DQ><InverseQ>XgZQ0H4m5ZGTF4T7JIXskIxmIOvP3xOXFILD5Z8URGQ=</InverseQ><D>bTENddZtWu3UpedRxrrM9m7+q47IkiKeqoO8tpj08GgdmZyFiuznEVsIEpmNPFv9yQlG12bYM6ZQruACbR35EQ==</D></RSAKeyValue>";
-        string pubKey = "<RSAKeyValue>\r\n  <Modulus>sIXhNuzfKJZBSgP0Ec7seN2O7jF1djyP6LO7nZ/5eq+LZidchKu78RtF3HDUN3Xq3Eg+yzfIOy3p+1SbbzEl5Q==</Modulus>\r\n  <Exponent>AQAB</Exponent>\r\n</RSAKeyValue>\r\n";
         private string _manv = "";
-        public frmQuanLyNhanVien(string manv)
+        public frmQuanLyNhanVien(string manv,string pubkey)
         {
             InitializeComponent();
             data_nhanvien.CellClick += data_nhanvien_CellContentClick;
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(512)) // 512 bit
-            {
-                //publicKey = rsa.ToXmlString(false); // Public key
-                //privateKey = rsa.ToXmlString(true); // Private key
-            }
+
+        //    publicKey = pubkey;
             LoadNhanVien();
             _manv = manv;
         }
@@ -178,6 +175,7 @@ namespace SuperMarketManager
 
         private void btnthem_Click_1(object sender, EventArgs e)
         {
+            //var (pub, pri) = RSAKeyGenerator.GenerateKeys();
             NhanVienDTO nhanVien = new NhanVienDTO();
             nhanVien.MANV = txt_manv.Text;
             nhanVien.HOTEN = txt_hoten.Text;
@@ -190,8 +188,9 @@ namespace SuperMarketManager
             nhanVien.LUONG = luong.ToString();
            nhanVien.TENDN = txt_tendn.Text;
            nhanVien.MATKHAU = txt_matkhau.Text;
+            var pub = RSAKeyGenerator.GeneratePublicKey(nhanVien.MATKHAU);
 
-            bool result = _nhanVienBLL.AddNhanVien(nhanVien, publicKey);
+            bool result = _nhanVienBLL.AddNhanVien(nhanVien, pub);
 
             if (result)
             {

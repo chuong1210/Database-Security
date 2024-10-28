@@ -1,14 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\",
+  "WorkspaceRootPath": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\lab_mahoacsdl_lab04\\qlsv_lab4\\qlsinhvien\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\gui\\formquanlysinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\gui\\formquanlysinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\gui\\formquanlylop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\gui\\formquanlylop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\gui\\formquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\gui\\formquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\helper\\rsakeygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\helper\\rsakeygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\helper\\rsahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\helper\\rsahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\lab_mahoacsdl_lab04\\qlsv_lab4\\qlsinhvien\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\dal\\diemdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\dal\\diemdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\gui\\formquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\gui\\formquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\bll\\diembll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\bll\\diembll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\dto\\sinhviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\dto\\sinhviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|c:\\users\\chuon\\documents\\zalo received files\\lab_mahoacsdl_lab041\\mahoacsdl\\qlsv_lab4\\qlsinhvien\\gui\\formquanlysinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1D01F98-CDFF-44AB-9619-F62292A208ED}|QLSInhVien\\QLSInhVien.csproj|solutionrelative:qlsinhvien\\gui\\formquanlysinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,27 +86,160 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmQuanLyNhanVien.cs",
-              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs",
-              "RelativeDocumentMoniker": "QLSInhVien\\frmQuanLyNhanVien.cs",
-              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs",
-              "RelativeToolTip": "QLSInhVien\\frmQuanLyNhanVien.cs",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAUwBUBAAAMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FormQuanLyLop.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\FormQuanLyLop.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\GUI\\FormQuanLyLop.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\FormQuanLyLop.cs",
+              "RelativeToolTip": "QLSInhVien\\GUI\\FormQuanLyLop.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T15:56:00.874Z",
+              "WhenOpened": "2024-10-28T15:33:06.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\Login.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\Login.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\Login.cs",
+              "RelativeToolTip": "QLSInhVien\\Login.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T15:29:31.822Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmQuanLyNhanVien.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs",
-              "RelativeDocumentMoniker": "QLSInhVien\\frmQuanLyNhanVien.cs",
-              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\Lab_MahoaCSDL_lab04\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs [Design]",
-              "RelativeToolTip": "QLSInhVien\\frmQuanLyNhanVien.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "RSAHelper.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\Helper\\RSAHelper.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\Helper\\RSAHelper.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\Helper\\RSAHelper.cs",
+              "RelativeToolTip": "QLSInhVien\\Helper\\RSAHelper.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAD4v0sAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T15:55:41.726Z",
+              "WhenOpened": "2024-10-28T15:03:56.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmQuanLyNhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\frmQuanLyNhanVien.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\frmQuanLyNhanVien.cs",
+              "RelativeToolTip": "QLSInhVien\\frmQuanLyNhanVien.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAAAL4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T15:29:05.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RSAKeyGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\Helper\\RSAKeyGenerator.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\Helper\\RSAKeyGenerator.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\Helper\\RSAKeyGenerator.cs",
+              "RelativeToolTip": "QLSInhVien\\Helper\\RSAKeyGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T15:29:02.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DiemBLL.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\BLL\\DiemBLL.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\BLL\\DiemBLL.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\BLL\\DiemBLL.cs",
+              "RelativeToolTip": "QLSInhVien\\BLL\\DiemBLL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T14:59:11.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SinhVienDTO.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\DTO\\SinhVienDTO.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\DTO\\SinhVienDTO.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\DTO\\SinhVienDTO.cs",
+              "RelativeToolTip": "QLSInhVien\\DTO\\SinhVienDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T14:54:16.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DiemDAL.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\DAL\\DiemDAL.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\DAL\\DiemDAL.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\DAL\\DiemDAL.cs",
+              "RelativeToolTip": "QLSInhVien\\DAL\\DiemDAL.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAIAwwFIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T14:48:03.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormQuanLyDiem.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\FormQuanLyDiem.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\GUI\\FormQuanLyDiem.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\FormQuanLyDiem.cs [Design]",
+              "RelativeToolTip": "QLSInhVien\\GUI\\FormQuanLyDiem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T14:46:06.216Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormQuanLyDiem.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\FormQuanLyDiem.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\GUI\\FormQuanLyDiem.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\FormQuanLyDiem.cs",
+              "RelativeToolTip": "QLSInhVien\\GUI\\FormQuanLyDiem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T14:43:56.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "formQuanLySinhVien.cs",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\formQuanLySinhVien.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\GUI\\formQuanLySinhVien.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\formQuanLySinhVien.cs",
+              "RelativeToolTip": "QLSInhVien\\GUI\\formQuanLySinhVien.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAqwM4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T14:43:41.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "formQuanLySinhVien.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\formQuanLySinhVien.cs",
+              "RelativeDocumentMoniker": "QLSInhVien\\GUI\\formQuanLySinhVien.cs",
+              "ToolTip": "C:\\Users\\chuon\\Documents\\Zalo Received Files\\Lab_MahoaCSDL_lab041\\MaHoaCSDL\\QLSV_Lab4\\QLSInhVien\\GUI\\formQuanLySinhVien.cs [Design]",
+              "RelativeToolTip": "QLSInhVien\\GUI\\formQuanLySinhVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T14:43:39.686Z",
               "EditorCaption": " [Design]"
             }
           ]

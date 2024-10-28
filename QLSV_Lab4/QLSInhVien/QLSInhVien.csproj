@@ -94,9 +94,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\DiemBLL.cs" />
     <Compile Include="BLL\LopBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\SinhVienBLL.cs" />
+    <Compile Include="DAL\DiemDAL.cs" />
     <Compile Include="DAL\LopDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\SinhVienDAL.cs" />
@@ -109,6 +111,12 @@
       <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="GUI\FormQuanLyDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormQuanLyDiem.Designer.cs">
+      <DependentUpon>FormQuanLyDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormQuanLyLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +130,8 @@
       <DependentUpon>formQuanLySinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\RSAHelper.cs" />
+    <Compile Include="Helper\RSAKeyGenerator.cs" />
+    <Compile Include="Helper\UserSession.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +142,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmQuanLyNhanVien.resx">
       <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormQuanLyDiem.resx">
+      <DependentUpon>FormQuanLyDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormQuanLyLop.resx">
       <DependentUpon>FormQuanLyLop.cs</DependentUpon>

@@ -13,6 +13,8 @@ namespace QLSInhVien.DTO
         public DateTime NGAYSINH { get; set; } // Ngày sinh
         public string DIACHI { get; set; }    // Địa chỉ
         public string MALOP { get; set; }     // Mã lớp
+        public string TENLOP { get; set; }     // Mã lớp
+
         public string TENDN { get; set; }     // Tên đăng nhập
         public string MATKHAU { get; set; }   // Mật khẩu (được mã hóa)
 

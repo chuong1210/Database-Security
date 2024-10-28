@@ -65,10 +65,20 @@ namespace QLSInhVien.Helper
             using (var rsa = GetRSAPublicKey(publicKey))
             {
                 byte[] salaryBytes = Encoding.UTF8.GetBytes(luongCB.ToString());
-                // Ensure you are using a consistent padding mode
                 return rsa.Encrypt(salaryBytes, RSAEncryptionPadding.Pkcs1); // Using PKCS1 padding
             }
         }
+
+   
+        public static byte[] EncryptScore(decimal score, string publicKey)
+        {
+            using (var rsa = GetRSAPublicKey(publicKey))
+            {
+                byte[] scoreBytes = Encoding.UTF8.GetBytes(score.ToString());
+                return rsa.Encrypt(scoreBytes, RSAEncryptionPadding.Pkcs1);
+            }
+        }
+
 
         public static decimal DecryptSalary(byte[] salaryBytes, string privateKey)
         {
@@ -88,7 +98,6 @@ namespace QLSInhVien.Helper
                 }
             }
         }
-
 
 
 

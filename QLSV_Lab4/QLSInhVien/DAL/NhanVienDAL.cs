@@ -75,8 +75,8 @@ namespace QLSInhVien.DAL
                     HOTEN = row["HOTEN"].ToString(),
                     EMAIL = row["EMAIL"].ToString(),
                     // Encrypt LUONG and convert to Base64 string
-                    //LUONG = Convert.ToBase64String((byte[])row["LUONG"]),
-                    LUONG = ConvertSalaryFromBytes((byte[])row["LUONG"], privateKey).ToString(),
+                    LUONG = Convert.ToBase64String((byte[])row["LUONG"]),
+                 //   LUONG = ConvertSalaryFromBytes((byte[])row["LUONG"], privateKey).ToString(),
                     TENDN = row["TENDN"].ToString(),
                     MATKHAU = Convert.ToBase64String((byte[])row["MATKHAU"])
                 };
@@ -131,10 +131,9 @@ namespace QLSInhVien.DAL
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Hash the password with SHA1
                         byte[] hashedPassword = RSAHelper.HashPasswordSHA1(nv.MATKHAU);
+                        string privateKey= Convert.ToBase64String(hashedPassword);
 
-                        // Encrypt salary (LUONG) with RSA using the provided public key
                         byte[] encryptedSalary = RSAHelper.EncryptWithRSA(decimal.Parse(nv.LUONG), pubKey);
 
                         // Set parameters
@@ -158,13 +157,14 @@ namespace QLSInhVien.DAL
                 return false;
             }
         }
-        public string getMaNV(string username)
+        public (string,string) getMaNV(string username)
         {
             string rs = "";
+            string rs2 = "";
                        using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT MANV FROM NHANVIEN WHERE TENDN = @username";
+                string query = "SELECT MANV, PUBKEY FROM NHANVIEN WHERE TENDN = @username";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@username", username);
@@ -173,11 +173,12 @@ namespace QLSInhVien.DAL
                     {
 
                         rs = reader["MaNV"].ToString();
+                        rs2 = reader["PubKey"].ToString();
                     }
 
                 }
             }
-            return rs;
+            return (rs,rs2);
 
         }
         public bool VerifyLogin(string username, string password)

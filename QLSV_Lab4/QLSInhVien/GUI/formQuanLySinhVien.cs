@@ -26,10 +26,7 @@ namespace QLSInhVien.GUI
             _malop = malop;
             lbDM.Text = string.Format("Danh mục sinh viên lớp {0}", malop);
             _manv = manv;
-            if(CanManageClass(_malop,_manv))
-            {
-                MessageBox.Show("123");
-            }
+      
         }
         
 private bool CanManageClass(string malop, string manv)
@@ -41,6 +38,7 @@ private bool CanManageClass(string malop, string manv)
         private void formQuanLySinhVien_Load(object sender, EventArgs e)
         {
             LoadStudentData();
+            btnQLDiem.Enabled = CanManageClass(_malop,_manv);
 
         }
 
@@ -200,5 +198,14 @@ private bool CanManageClass(string malop, string manv)
             this.Close();
             frm.ShowDialog();
         }
+
+        private void btnQLDiem_Click(object sender, EventArgs e)
+        {
+            FormQuanLyDiem frm = new FormQuanLyDiem(_manv);
+            this.Hide();
+            this.Close();
+            frm.ShowDialog();
+        }
     }
-}
+    }
+

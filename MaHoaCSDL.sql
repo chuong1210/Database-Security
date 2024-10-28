@@ -24,8 +24,13 @@ CREATE TABLE NHANVIEN (
     LUONG VARBINARY(MAX),
     TENDN NVARCHAR(100) NOT NULL UNIQUE,
     MATKHAU VARBINARY(MAX) NOT NULL,
+	PUBKEY VARCHAR(20),
     CONSTRAINT PK_NV PRIMARY KEY (MANV)
 );
+ALTER TABLE NHANVIEN
+ADD  PUBKEY VARCHAR(200)
+
+
 CREATE TABLE LOP (
     MALOP VARCHAR(20) NOT NULL,
     TENLOP NVARCHAR(100) NOT NULL,
@@ -287,15 +292,18 @@ BEGIN
     END
     
     -- Thêm nhân viên mới
-    INSERT INTO DBO.NHANVIEN (MANV, HOTEN, EMAIL, LUONG, TENDN, MATKHAU)
-    VALUES (@MANV, @HOTEN, @EMAIL, @LUONG, @TENDN, @MK);
+    INSERT INTO DBO.NHANVIEN (MANV, HOTEN, EMAIL, LUONG, TENDN, MATKHAU,PUBKEY)
+    VALUES (@MANV, @HOTEN, @EMAIL, @LUONG, @TENDN, @MK,@PUB);
 END
 GO
+DECLARE @encryptedValue VARBINARY(MAX);
+SET @encryptedValue = CONVERT(VARBINARY(MAX), 'LLLLLL')
 
--- Ví dụ thực thi stored procedure
-EXEC SP_INS_PUBLIC_ENCRYPT_NHANVIEN 
-    'NV01', 'NGUYEN VAN A', 'NVA@', CONVERT(VARBINARY(MAX), 'LLLLLL'), 
-    'NVA', HASHBYTES('SHA1', 'MKMKMKMK'), 'PUBPUB';
+DECLARE @encryptedPassword VARBINARY(MAX);
+SET @encryptedPassword = HASHBYTES('SHA1', 'MKMKMKMK')
+EXEC SP_INS_PUBLIC_ENCRYPT_NHANVIEN
+    'NV01', 'NGUYEN VAN A', 'NVA@', @encryptedValue, 
+    'NVA', @encryptedPassword, 'PUBPUB';
 
 /*----------------------------------------------------------
 MASV: 
@@ -424,4 +432,104 @@ CREATE PROCEDURE SP_SEL_ALL_EMPLOYEES
 AS
 BEGIN
     SELECT MANV, HOTEN FROM NHANVIEN;
+END;
+
+
+
+
+
+
+--------------------- cau cuoi
+
+CREATE or alter PROCEDURE SP_GET_STUDENTS_BY_EMPLOYEE
+    @MANV NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT S.MASV, S.HOTEN , L.TENLOP
+    FROM SINHVIEN S
+    JOIN LOP L ON S.MALOP = L.MALOP
+    WHERE L.MANV = @MANV;
+END
+GO
+
+
+CREATE PROCEDURE SP_INSERT_SCORE
+    @MASV NVARCHAR(20),
+    @MAHP NVARCHAR(20),
+    @DIEMTHI VARBINARY(MAX), 
+    @PUBKEY NVARCHAR(500)     
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO BANGDIEM (MASV, MAHP, DIEMTHI)
+    VALUES (@MASV, @MAHP, @DIEMTHI);
+END
+GO
+
+IF NOT EXISTS (SELECT 1 FROM sys.certificates WHERE name = N'MyCertificateName')
+BEGIN
+    CREATE CERTIFICATE MyCertificateName WITH SUBJECT = 'My Certificate';
+END
+
+
+CREATE ASYMMETRIC KEY MyRSAKey
+WITH ALGORITHM = RSA_2048
+ENCRYPTION BY PASSWORD = 'StrongPassword123!';
+CREATE PROCEDURE InsertSinhVien
+    @MASV VARCHAR(20),
+    @HOTEN VARCHAR(100),
+    @NGAYSINH DATE,
+    @DIACHI VARCHAR(255),
+    @LUONGCB DECIMAL(18,2),
+    @MK VARCHAR(MAX),
+    @PUBKEY VARCHAR(MAX)
+AS
+BEGIN
+    -- Kiểm tra xem LUONGCB có hợp lệ không.  (Nên thêm validation)
+    IF @LUONGCB IS NULL
+    BEGIN
+        RAISERROR('Lương cơ bản không được để trống.', 16, 1)
+        RETURN
+    END
+
+    -- Kiểm tra xem @MK có hợp lệ không. Nên thêm validation. 
+    -- Ví dụ, kiểm tra độ dài tối thiểu của khóa.
+    IF DATALENGTH(@MK) < 1024
+    BEGIN
+        RAISERROR('Khóa bí mật (@MK) không hợp lệ', 16, 1)
+        RETURN
+    END
+
+    DECLARE @MATKHAU VARCHAR(MAX);
+    SELECT @MATKHAU = HASHBYTES('SHA1', @HOTEN); -- Hoặc thêm các trường khác
+
+    DECLARE @LUONG VARBINARY(MAX);
+    DECLARE @RSAKeyHandle INT;
+
+    SELECT @RSAKeyHandle = KeyHandle FROM CryptoKeys WHERE KeyName = 'MyRSAKey';
+
+    -- Kiểm tra xem khóa được tìm thấy
+    IF @RSAKeyHandle IS NULL
+    BEGIN
+        RAISERROR('Khóa MyRSAKey không tìm thấy.', 16, 1)
+        RETURN;
+    END
+
+    -- Sử dụng sp_RSA_Encrypt
+    EXEC sp_RSA_Encrypt @InputParameter = @LUONGCB, @KeyHandle = @RSAKeyHandle, @OutputParameter = @LUONG OUTPUT;  -- OUTPUT
+
+    --Kiểm tra kết quả mã hóa
+    IF @LUONG IS NULL
+    BEGIN
+        RAISERROR('Lỗi trong quá trình mã hóa.', 16, 1)
+        RETURN;
+    END
+
+    INSERT INTO NHANHANVIEN(MANV, HOTEN, NGAYSINH, DIACHI, MATKHAU, LUONG, PUBKEY)
+    VALUES (@MASV, @HOTEN, @NGAYSINH, @DIACHI, @MATKHAU, @LUONG, @PUBKEY);
+
+    SELECT 'Thêm mới thành công';
 END;

@@ -25,7 +25,7 @@ namespace QLSInhVien.BLL
         {
             return nvDAL.CheckClassManagement(malop, manv);
         }
-        public string getMaNV(string username)
+        public (string,string) getMaNV(string username)
         {
             return nvDAL.getMaNV(username);
         }
