@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QLSInhVien.DTO;
+using QLSInhVien.Helper;
 
 namespace QLSInhVien.DAL
 {
     public class DiemDAL
     {
         private SqlConnection connection;
-        private DataSet dataSet;
         private string connectionString = ConfigurationManager.ConnectionStrings["MyDataConnection"].ConnectionString;
    
         public DataTable GetStudentsByEmployeeDT(string manv)
@@ -56,7 +56,8 @@ namespace QLSInhVien.DAL
                             {
                                 MASV = reader["MASV"].ToString(),
                                 HOTEN = reader["HOTEN"].ToString(),
-                                TENLOP = reader["TENLOP"].ToString() 
+                                TENLOP = reader["TENLOP"].ToString() ,
+
                             };
                             students.Add(student);
                         }
@@ -66,6 +67,7 @@ namespace QLSInhVien.DAL
 
             return students;
         }
+
 
         public bool InsertScore(string masv, string mahp, byte[] diemThi, string pubKey)
         {
@@ -85,6 +87,8 @@ namespace QLSInhVien.DAL
                 }
             }
         }
+
+
         public DataTable GetSubjects()
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -101,5 +105,87 @@ namespace QLSInhVien.DAL
                 }
             }
         }
+
+        public bool UpdateScore(string masv, string mahp, byte[] diemThi, string pubKey)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_UPDATE_SCORE", conn)) // Assuming you have a stored procedure for update
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@MASV", masv);
+                    cmd.Parameters.AddWithValue("@MAHP", mahp);
+                    cmd.Parameters.AddWithValue("@DIEMTHI", diemThi);
+
+                    conn.Open();
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0; // Returns true if update was successful
+                }
+            }
+        }
+
+        public List<DiemDTO> GetStudentScores(string masv, string privateKey)
+        {
+            List<DiemDTO> scores = new List<DiemDTO>();
+            DataTable dt = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_GET_STUDENT_SCORES", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@MASV", masv);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+
+                }
+            }
+                             foreach (DataRow reader in dt.Rows)
+            {
+                            byte[] data = (byte[])reader["DIEMTHI"];
+                            string encryptedScore = Convert.ToBase64String(data);
+
+                            byte[] decryptedtex = RSAKeyGenerator.Decryption(data, UserSession.PrivateKeyParamerterSession, false);
+                            UnicodeEncoding ByteConverter = new UnicodeEncoding();
+                            encryptedScore = ByteConverter.GetString(decryptedtex);
+
+
+
+
+                            DiemDTO score = new DiemDTO
+                            {
+                                MAHP = reader["MAHP"].ToString(),
+                                TENHP = reader["TENHP"].ToString(),
+								//DIEM =Convert.ToBase64String(data),
+
+								DIEM = encryptedScore,
+                            };
+                            scores.Add(score);
+                        }
+
+            return scores;
+        }
+
+      
+
+       
+
+        public bool DeleteScore(string masv, string mahp)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_DELETE_SCORE", conn)) // Assuming you have a stored procedure for delete
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@MASV", masv);
+                    cmd.Parameters.AddWithValue("@MAHP", mahp);
+
+                    conn.Open();
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0; // Returns true if delete was successful
+                }
+            }
+        }
+
     }
 }

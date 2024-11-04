@@ -53,7 +53,6 @@ namespace QLSInhVien.Helper
             rsa.FromXmlString(publicKey);
             return rsa;
         }
-
         public static RSACryptoServiceProvider GetRSAPrivateKey(string privateKey)
         {
             var rsa = new RSACryptoServiceProvider(512);
@@ -75,7 +74,9 @@ namespace QLSInhVien.Helper
             using (var rsa = GetRSAPublicKey(publicKey))
             {
                 byte[] scoreBytes = Encoding.UTF8.GetBytes(score.ToString());
-                return rsa.Encrypt(scoreBytes, RSAEncryptionPadding.Pkcs1);
+                byte[] encryptedScore = rsa.Encrypt(scoreBytes, RSAEncryptionPadding.Pkcs1);
+
+                return encryptedScore;
             }
         }
 
@@ -89,21 +90,45 @@ namespace QLSInhVien.Helper
                     // Ensure the same padding mode is used here
                     byte[] decryptedBytes = rsa.Decrypt(salaryBytes, RSAEncryptionPadding.Pkcs1); // Using PKCS1 padding
                     string decryptedSalary = Encoding.UTF8.GetString(decryptedBytes);
-                    return decimal.Parse(decryptedSalary); // Convert string back to decimal
+                    return decimal.Parse(decryptedSalary); 
                 }
                 catch (CryptographicException ex)
                 {
                     Console.WriteLine($"Decryption failed: {ex.Message}");
-                    throw; // Re-throw the exception to be handled elsewhere
+                    throw;
                 }
             }
         }
 
+        public static byte[] EncryptScore(string score, string publicKey)
+        {
+            using (var rsa = new RSACryptoServiceProvider(512))
+            {
+                rsa.FromXmlString(publicKey);
+                byte[] scoreBytes = Encoding.UTF8.GetBytes(score);
+                return rsa.Encrypt(scoreBytes, false);
+            }
+        }
 
-
-
-
+        public static string DecryptScore(byte[] dataToDecrypt, string privateKey)
+        {
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(512))
+            {
+                rsa.FromXmlString(privateKey);
+                byte[] decryptedBytes = rsa.Decrypt(dataToDecrypt, false);
+                return Encoding.UTF8.GetString(decryptedBytes);
+            }
+        }
     }
+
+
+
+
+
+
+
+
+
 
 }
 

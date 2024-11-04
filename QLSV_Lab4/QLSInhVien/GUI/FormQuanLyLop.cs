@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLSInhVien.BLL;
 using QLSInhVien.DTO;
+using QLSInhVien.Helper;
+using SuperMarketManager;
 
 namespace QLSInhVien.GUI
 {
@@ -58,7 +60,12 @@ namespace QLSInhVien.GUI
 
         private void ManageScoresItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Quản lý điểm clicked!");
+            var lop = data_nhanvien.SelectedRows[0];
+            string malop = lop.Cells[0].Value.ToString();
+            FormQuanLyDiem frm = new FormQuanLyDiem( _manv);
+            this.Close();
+            this.Hide();
+            frm.Show();
         }
         private void btnthem_Click(object sender, EventArgs e)
         {
@@ -137,6 +144,38 @@ namespace QLSInhVien.GUI
             txt_tenlh.Text = lop.Cells[1].Value.ToString();
             cboNV.SelectedValue = lop.Cells[2].Value.ToString();
 
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            loadLop();
+
+        }
+
+        private void btn_thoat_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+            if (result == DialogResult.Yes)
+            {
+
+                Login formDangNhap = new Login();
+                formDangNhap.Show();
+
+
+                this.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmQuanLyNhanVien formDangNhap = new frmQuanLyNhanVien(_manv,UserSession.PublicKeySession);
+            formDangNhap.Show();
+
+
+            this.Close();
         }
     }
 }

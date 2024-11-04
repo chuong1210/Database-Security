@@ -25,12 +25,25 @@ namespace QLSInhVien.BLL
         {
             return diemDAL.InsertScore(masv, mahp, diemThi, pubKey);
         }
+        public List<DiemDTO> GetStudentScores(string masv, string privateKey)
+        {
+            return diemDAL.GetStudentScores(masv, privateKey);
+        }
 
-    
-        public DataTable GetSubjects()
+            public DataTable GetSubjects()
         {
             return diemDAL.GetSubjects();
         }
+        public bool UpdateScore(string masv, string mahp, byte[] diemThi, string pubKey)
+        {
+            return diemDAL.UpdateScore(masv,mahp, diemThi, pubKey);
 
-    }
+        }
+
+
+        public bool DeleteScore(string masv, string mahp)
+        {
+            return diemDAL.DeleteScore(masv, mahp);
+        }
+        }
 }

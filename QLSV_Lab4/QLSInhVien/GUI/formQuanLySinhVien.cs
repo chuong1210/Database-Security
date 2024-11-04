@@ -97,7 +97,7 @@ private bool CanManageClass(string malop, string manv)
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            if (!CanManageClass(_manv, _malop))
+            if (!CanManageClass(_malop, _manv))
             {
                 MessageBox.Show("Bạn không có quyền xóa sinh viên trong lớp này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -125,9 +125,9 @@ private bool CanManageClass(string malop, string manv)
 
         private void btnsua_Click(object sender, EventArgs e)
         {
-            if (!CanManageClass(_manv, _malop))
-            {
-                MessageBox.Show("Bạn không có quyền cập nhật sinh viên trong lớp này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			if (!CanManageClass(_malop, _manv))
+			{
+				MessageBox.Show("Bạn không có quyền cập nhật sinh viên trong lớp này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -164,7 +164,19 @@ private bool CanManageClass(string malop, string manv)
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+            if (result == DialogResult.Yes)
+            {
+
+                Login formDangNhap = new Login();
+                formDangNhap.Show();
+
+
+                this.Close();
+            }
         }
 
         private void data_sinhvien_CellClick(object sender, DataGridViewCellEventArgs e)

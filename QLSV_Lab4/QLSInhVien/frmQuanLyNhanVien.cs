@@ -23,17 +23,27 @@ namespace SuperMarketManager
     public partial class frmQuanLyNhanVien : Form
     {
         private NhanVienBLL _nhanVienBLL = new NhanVienBLL();
-        private string privateKey = "<RSAKeyValue><Modulus>vnahAtVsWGFZgF4iYbXyp15crqDiG7ZPSmS6DdRO4iSoojlrIi2/yUvN4S0wu8whH71WCy5wAoI5/YLOE3/6IQ==</Modulus><Exponent>AQAB</Exponent><P>yZ46yJYkupsiLqYrAWKL9zps6YnK1hP7TEbxfVGSI9c=</P><Q>8dYqaUMc++z7sE7PtgbMQ3sHVBuxD5Jc7We+TbKHEsc=</Q><DP>HGhQ/AY7spc9H7mGAbHy6qiuw9EIZVV3aO3uBKxDnQ0=</DP><DQ>fircf4QrB+fQO2Ayj2WmhYIXBbNYwaX7Y0QfjYuZWps=</DQ><InverseQ>XgZQ0H4m5ZGTF4T7JIXskIxmIOvP3xOXFILD5Z8URGQ=</InverseQ><D>bTENddZtWu3UpedRxrrM9m7+q47IkiKeqoO8tpj08GgdmZyFiuznEVsIEpmNPFv9yQlG12bYM6ZQruACbR35EQ==</D></RSAKeyValue>";
-        private string publicKey = "<RSAKeyValue><Modulus>vnahAtVsWGFZgF4iYbXyp15crqDiG7ZPSmS6DdRO4iSoojlrIi2/yUvN4S0wu8whH71WCy5wAoI5/YLOE3/6IQ==</Modulus><Exponent>AQAB</Exponent><P>yZ46yJYkupsiLqYrAWKL9zps6YnK1hP7TEbxfVGSI9c=</P><Q>8dYqaUMc++z7sE7PtgbMQ3sHVBuxD5Jc7We+TbKHEsc=</Q><DP>HGhQ/AY7spc9H7mGAbHy6qiuw9EIZVV3aO3uBKxDnQ0=</DP><DQ>fircf4QrB+fQO2Ayj2WmhYIXBbNYwaX7Y0QfjYuZWps=</DQ><InverseQ>XgZQ0H4m5ZGTF4T7JIXskIxmIOvP3xOXFILD5Z8URGQ=</InverseQ><D>bTENddZtWu3UpedRxrrM9m7+q47IkiKeqoO8tpj08GgdmZyFiuznEVsIEpmNPFv9yQlG12bYM6ZQruACbR35EQ==</D></RSAKeyValue>";
         private string _manv = "";
+     
+        private string publickey = UserSession.PublicKeySession;
         public frmQuanLyNhanVien(string manv,string pubkey)
         {
             InitializeComponent();
+
             data_nhanvien.CellClick += data_nhanvien_CellContentClick;
 
         //    publicKey = pubkey;
             LoadNhanVien();
             _manv = manv;
+        }
+        private void ClearTextboxes()
+        {
+            txt_manv.Clear();
+            txt_hoten.Clear();
+            txt_email.Clear();
+            txt_luong.Clear();
+            txt_tendn.Clear();
+            txt_matkhau.Clear();
         }
 
         private void data_nhanvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -52,57 +62,7 @@ namespace SuperMarketManager
             }
         }
 
-        private async void btnthem_Click(object sender, EventArgs e)
-        {
-
-            // Kiểm tra dữ liệu đầu vào
-            if (string.IsNullOrEmpty(txt_manv.Text) || string.IsNullOrEmpty(txt_hoten.Text) ||
-                string.IsNullOrEmpty(txt_email.Text) || string.IsNullOrEmpty(txt_luong.Text) ||
-                string.IsNullOrEmpty(txt_tendn.Text) || string.IsNullOrEmpty(txt_matkhau.Text))
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            } 
-
-
-        }
-
-        private async void btnxoa_Click(object sender, EventArgs e)
-        {
-           
-                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.No) return;
-
-                  
-                     
-                            MessageBox.Show("Xóa nhân viên thành công!");
-                            LoadNhanVien(); // Tải lại dữ liệu
-                     
-                            MessageBox.Show("Không tìm thấy nhân viên để xóa.");
-        }
-
-        private async void btnsua_Click(object sender, EventArgs e)
-        {
-          
-                    // Kiểm tra dữ liệu đầu vào
-                    if (string.IsNullOrEmpty(txt_manv.Text) || string.IsNullOrEmpty(txt_hoten.Text) ||
-                        string.IsNullOrEmpty(txt_email.Text) || string.IsNullOrEmpty(txt_luong.Text) ||
-                        string.IsNullOrEmpty(txt_tendn.Text) || string.IsNullOrEmpty(txt_matkhau.Text))
-                    {
-                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin để cập nhật!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-
-                  
-                
-                        // Thực thi lệnh cập nhật không đồng bộ
-                      
-                            MessageBox.Show("Cập nhật nhân viên thành công!");
-                            LoadNhanVien(); // Tải lại danh sách nhân viên
-              
-             
-        }
+   
 
         private void LoadNhanVien()
         {
@@ -112,7 +72,7 @@ namespace SuperMarketManager
                     data_nhanvien.AutoGenerateColumns = false;
             //data_nhanvien.DataSource = dt;
             //DataTable dt= _nhanVienBLL.GetAllNhanVien(privateKey);
-            List<NhanVienDTO> dt= _nhanVienBLL.GetAllNhanVien(privateKey);
+            List<NhanVienDTO> dt= _nhanVienBLL.GetAllNhanVien("");
 
             if (dt.Count > 0)
             {
@@ -150,7 +110,7 @@ namespace SuperMarketManager
             }
         }
 
-        private async void btnsave_Click(object sender, EventArgs e)
+        private  void btnsave_Click(object sender, EventArgs e)
         {
            
                     // Kiểm tra dữ liệu đầu vào
@@ -175,6 +135,13 @@ namespace SuperMarketManager
 
         private void btnthem_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_manv.Text) || string.IsNullOrEmpty(txt_hoten.Text) ||
+             string.IsNullOrEmpty(txt_email.Text) || string.IsNullOrEmpty(txt_luong.Text) ||
+             string.IsNullOrEmpty(txt_tendn.Text) || string.IsNullOrEmpty(txt_matkhau.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             //var (pub, pri) = RSAKeyGenerator.GenerateKeys();
             NhanVienDTO nhanVien = new NhanVienDTO();
             nhanVien.MANV = txt_manv.Text;
@@ -188,14 +155,18 @@ namespace SuperMarketManager
             nhanVien.LUONG = luong.ToString();
            nhanVien.TENDN = txt_tendn.Text;
            nhanVien.MATKHAU = txt_matkhau.Text;
-            var pub = RSAKeyGenerator.GeneratePublicKey(nhanVien.MATKHAU);
+            // var (pub,priv) = RSAKeyGenerator.GenerateKeysFromPassword(nhanVien.MATKHAU);
+          
+             var (pub,pri) = RSAKeyGenerator.GenerateKeys();
 
-            bool result = _nhanVienBLL.AddNhanVien(nhanVien, pub);
+            bool result = _nhanVienBLL.AddNhanVien(nhanVien, RSAKeyGenerator.RSAParametersToXmlString(pub,false));
 
             if (result)
             {
                 MessageBox.Show("Employee added successfully.");
                 LoadNhanVien(); // Tải lại danh sách nhân viên
+                ClearTextboxes();
+
 
             }
             else
@@ -224,12 +195,13 @@ namespace SuperMarketManager
                 MATKHAU = txt_matkhau.Text 
             };
 
-            bool success = _nhanVienBLL.UpdateNhanVien(nv, publicKey); // Ensure you have publicKey defined
+            bool success = _nhanVienBLL.UpdateNhanVien(nv, publickey); // Ensure you have publicKey defined
 
             if (success)
             {
                 MessageBox.Show("Cập nhật nhân viên thành công!");
                 LoadNhanVien(); // Reload employee data
+                ClearTextboxes();
             }
             else
             {
@@ -264,6 +236,8 @@ namespace SuperMarketManager
                 {
                     MessageBox.Show("Xóa nhân viên thành công!");
                     LoadNhanVien();
+                    ClearTextboxes();
+
                 }
                 else
                 {

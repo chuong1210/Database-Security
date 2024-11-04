@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using QLSInhVien.DTO;
 using System.Configuration;
 using QLSInhVien.Helper;
+using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 namespace QLSInhVien.DAL
 {
 
@@ -69,14 +71,22 @@ namespace QLSInhVien.DAL
 
             foreach (DataRow row in dt.Rows)
             {
+                byte[] luongBytes = (byte[])row["LUONG"];
+                byte[] decryptedtex = RSAKeyGenerator.Decryption(luongBytes, UserSession.PrivateKeyParamerterSession, false);
+
+                UnicodeEncoding ByteConverter = new UnicodeEncoding();
+                string encryptedSalary = Convert.ToBase64String(luongBytes);
+
+                encryptedSalary = ByteConverter.GetString(decryptedtex);
+
                 NhanVienDTO nv = new NhanVienDTO
                 {
                     MANV = row["MANV"].ToString(),
                     HOTEN = row["HOTEN"].ToString(),
                     EMAIL = row["EMAIL"].ToString(),
                     // Encrypt LUONG and convert to Base64 string
-                    LUONG = Convert.ToBase64String((byte[])row["LUONG"]),
-                 //   LUONG = ConvertSalaryFromBytes((byte[])row["LUONG"], privateKey).ToString(),
+                     //LUONG = Convert.ToBase64String((byte[])row["LUONG"]),
+                    LUONG = encryptedSalary,
                     TENDN = row["TENDN"].ToString(),
                     MATKHAU = Convert.ToBase64String((byte[])row["MATKHAU"])
                 };
@@ -106,14 +116,18 @@ namespace QLSInhVien.DAL
             // Encrypt the LUONG and MATKHAU columns and replace their values
             foreach (DataRow row in dt.Rows)
             {
-                // Assuming LUONG is stored as byte[] in the database
                 byte[] luongBytes = (byte[])row["LUONG"];
-                string encryptedSalary = Convert.ToBase64String(luongBytes); // Convert to Base64 string
-                row["LUONG"] = encryptedSalary; 
+                string encryptedSalary = Convert.ToBase64String(luongBytes); 
+                byte[] decryptedtex = RSAKeyGenerator.Decryption(luongBytes, UserSession.PrivateKeyParamerterSession, false);
+
+                UnicodeEncoding ByteConverter = new UnicodeEncoding();
+                encryptedSalary = ByteConverter.GetString(decryptedtex);
+
+                row["LUONG"] = encryptedSalary;
 
                 // Assuming MATKHAU is stored as byte[] in the database
                 byte[] passwordBytes = (byte[])row["MATKHAU"];
-                string encryptedPassword = Convert.ToBase64String(passwordBytes); // Convert to Base64 string
+                string encryptedPassword = Convert.ToBase64String(passwordBytes);
                 row["MATKHAU"] = encryptedPassword; // Update the row with the Base64 string
             }
 
@@ -134,13 +148,18 @@ namespace QLSInhVien.DAL
                         byte[] hashedPassword = RSAHelper.HashPasswordSHA1(nv.MATKHAU);
                         string privateKey= Convert.ToBase64String(hashedPassword);
 
-                        byte[] encryptedSalary = RSAHelper.EncryptWithRSA(decimal.Parse(nv.LUONG), pubKey);
+                       // byte[] encryptedSalary = RSAHelper.EncryptWithRSA(decimal.Parse(nv.LUONG), pubKey);
 
+
+                        UnicodeEncoding ByteConverter = new UnicodeEncoding();
+                        byte[] encryptedSalary2 = ByteConverter.GetBytes(nv.LUONG);
+                        byte[] encryptedtext = RSAKeyGenerator.Encryption(encryptedSalary2, UserSession.PublicKeyParamerterSession, false);
+                       // ByteConverter.GetString(encryptedtext);
                         // Set parameters
                         cmd.Parameters.AddWithValue("@MANV", nv.MANV);
                         cmd.Parameters.AddWithValue("@HOTEN", nv.HOTEN);
                         cmd.Parameters.AddWithValue("@EMAIL", nv.EMAIL);
-                        cmd.Parameters.AddWithValue("@LUONG", encryptedSalary);
+                        cmd.Parameters.AddWithValue("@LUONG", encryptedtext);
                         cmd.Parameters.AddWithValue("@TENDN", nv.TENDN);
                         cmd.Parameters.AddWithValue("@MK", hashedPassword);
                         cmd.Parameters.AddWithValue("@PUB", pubKey);
@@ -246,13 +265,15 @@ namespace QLSInhVien.DAL
                         byte[] hashedPassword = RSAHelper.HashPasswordSHA1(nv.MATKHAU);
 
                         // Encrypt salary (LUONG) with RSA using the provided public key
-                        byte[] encryptedSalary = RSAHelper.EncryptWithRSA(decimal.Parse(nv.LUONG), pubKey);
 
+                        UnicodeEncoding ByteConverter = new UnicodeEncoding();
+                        byte[] encryptedSalary2 = ByteConverter.GetBytes(nv.LUONG);
+                        byte[] encryptedtext = RSAKeyGenerator.Encryption(encryptedSalary2, UserSession.PublicKeyParamerterSession, false);
                         // Set parameters
                         cmd.Parameters.AddWithValue("@MANV", nv.MANV);
                         cmd.Parameters.AddWithValue("@HOTEN", nv.HOTEN);
                         cmd.Parameters.AddWithValue("@EMAIL", nv.EMAIL);
-                        cmd.Parameters.AddWithValue("@LUONG", encryptedSalary);
+                        cmd.Parameters.AddWithValue("@LUONG", encryptedtext);
                         cmd.Parameters.AddWithValue("@MK", hashedPassword);
 
                         conn.Open();

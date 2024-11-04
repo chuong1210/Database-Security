@@ -57,3 +57,4 @@ C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\MaHoaCSDL\QLSV
 C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\MaHoaCSDL\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.csproj.Up2Date
 C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\MaHoaCSDL\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.exe
 C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\MaHoaCSDL\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.pdb
+C:\Users\chuon\Documents\Zalo Received Files\Lab_MahoaCSDL_lab041\MaHoaCSDL\QLSV_Lab4\QLSInhVien\obj\Debug\QLSInhVien.GUI.frmtest.resources

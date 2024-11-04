@@ -63,6 +63,16 @@ namespace QLSInhVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search_icon_png_21 {
+            get {
+                object obj = ResourceManager.GetObject("search-icon-png-21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wp7124745 {
             get {
                 object obj = ResourceManager.GetObject("wp7124745", resourceCulture);

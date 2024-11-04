@@ -19,8 +19,7 @@ namespace QLSInhVien
     public partial class Login : Form
     {
         private NhanVienBLL nvBLL = new NhanVienBLL();
-        private string _publicKey;
-        private string _privateKey;
+     
 
         public Login()
         {
@@ -38,18 +37,50 @@ namespace QLSInhVien
                 // Đăng nhập thành công
                 MessageBox.Show("Đăng nhập thành công");
                 var (manv,pubkey) = nvBLL.getMaNV(username);
-                if(pubkey==string.Empty)
-                {
-                    pubkey = RSAKeyGenerator.GeneratePublicKey(password);
-                }
-                //using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(512))
-                //{
-                //    _publicKey = rsa.ToXmlString(false); // Public key
-                //    _privateKey = rsa.ToXmlString(true);  // Private key
-                //}
+                //var (publickey,privatekey) = RSAKeyGenerator.GenerateKeys();
+                string prikey = "";
+				// Convert to XML string for storage
+				// Convert to XML string for storage
+
+				var (generatedPublicKey, generatedPrivateKey) = RSAKeyGenerator.GenerateKeys();
+
+
+                //if (pubkey == string.Empty)
+                //            {
+                //                pubkey = RSAKeyGenerator.RSAParametersToXmlString(generatedPublicKey, false);
+                //                prikey = RSAKeyGenerator.RSAParametersToXmlString(generatedPrivateKey, true);
+
+                //                // Store keys in session or database as needed
+                //                UserSession.PublicKeySession = pubkey;
+                //                UserSession.PriKeySession = prikey;
+                //                UserSession.PublicKeyParamerterSession = generatedPublicKey;
+                //                UserSession.PrivateKeyParamerterSession = generatedPrivateKey;
+
+
+                //            }
+                //            else
+                //            {
+                //                RSAParameters publickey = RSAKeyGenerator.XmlStringToRSAParameters(pubkey, false);
+                //                UserSession.PublicKeyParamerterSession = publickey;
+
+                //                RSAParameters privatekey = RSAKeyGenerator.XmlStringToRSAParameters(UserSession.PriKeySession, true);
+                //                UserSession.PrivateKeyParamerterSession = generatedPrivateKey;
+
+                //            }
+
+
+                RSAParameters publickey = RSAKeyGenerator.XmlStringToRSAParameters(UserSession.PublicKeySession, false);
+                UserSession.PublicKeyParamerterSession = publickey;
+
+                RSAParameters privatekey = RSAKeyGenerator.XmlStringToRSAParameters(UserSession.PriKeySession, true);
+                UserSession.PrivateKeyParamerterSession = privatekey;
+
+
 
                 frmQuanLyNhanVien dsNhanVien = new frmQuanLyNhanVien(manv, pubkey);
-                UserSession.PublicKeySession = pubkey;
+         
+
+
                 dsNhanVien.Show();
                 this.Hide();
             }
@@ -70,10 +101,16 @@ namespace QLSInhVien
 
         }
 
-
-
-
-
-
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxHienMatKhau.Checked)
+            {
+                txtMatKhau.PasswordChar = '\0';
+            }
+            else
+            {
+                txtMatKhau.PasswordChar = '*';
+            }
+        }
     }
 }

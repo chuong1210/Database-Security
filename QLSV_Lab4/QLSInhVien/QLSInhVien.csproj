@@ -102,6 +102,7 @@
     <Compile Include="DAL\LopDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\SinhVienDAL.cs" />
+    <Compile Include="DTO\DiemDTO.cs" />
     <Compile Include="DTO\LopDTO.cs" />
     <Compile Include="DTO\SinhVienDTO.cs" />
     <Compile Include="frmQuanLyNhanVien.cs">
@@ -129,6 +130,12 @@
     <Compile Include="GUI\formQuanLySinhVien.Designer.cs">
       <DependentUpon>formQuanLySinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmtest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmtest.Designer.cs">
+      <DependentUpon>frmtest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\RSAHelper.cs" />
     <Compile Include="Helper\RSAKeyGenerator.cs" />
     <Compile Include="Helper\UserSession.cs" />
@@ -151,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formQuanLySinhVien.resx">
       <DependentUpon>formQuanLySinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmtest.resx">
+      <DependentUpon>frmtest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -181,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wp7124745.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon-png-21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
